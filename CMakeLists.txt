@@ -8,8 +8,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Find Boost
 find_package(Boost REQUIRED)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
-target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
+file(GLOB EXERCISE_SOURCES src/exercises/*.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp ${EXERCISE_SOURCES})
+target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR}/src)
 # For header-only Boost components, no linking is necessary.
 # If you use compiled Boost libraries, link them here, e.g.:
 # target_link_libraries(${PROJECT_NAME} PRIVATE Boost::boost)
