@@ -14,6 +14,8 @@
 #include "exercises/10_pointers_references.h"
 #include "exercises/11_matrix_formatting.h"
 #include "exercises/12_systems_hardware.h"
+#include "exercises/13_type_casting.h"
+#include "exercises/14_ecs_stl.h"
 
 int main(int argc, char* argv[]) {
     std::unordered_map<std::string, std::function<void()>> exercises = {
@@ -29,6 +31,8 @@ int main(int argc, char* argv[]) {
         {"10", []() { exercise_pointers_references(); }},
         {"11", []() { exercise_matrix_formatting(); }},
         {"12", []() { exercise_systems_hardware(); }},
+        {"13", []() { exercise_type_casting(); }},
+        {"14", []() { exercise_ecs_stl(); }},
     };
 
     std::cout << "C++ Training Exercises\n";
@@ -45,6 +49,8 @@ int main(int argc, char* argv[]) {
     std::cout << "10. Pointers and References (raw pointers, references, move semantics)\n";
     std::cout << "11. Matrix Operations and Terminal Formatting (matrix math, ANSI colors)\n";
     std::cout << "12. Signals, IRQ, and DMA (POSIX signals, interrupts, DMA)\n";
+    std::cout << "13. Static and Dynamic Type Casting (static_cast, dynamic_cast, reinterpret_cast, const_cast)\n";
+    std::cout << "14. ECS with STL (Entity Component System using unordered_map, vector)\n";
     std::cout << "0. Run all exercises\n";
     std::cout << "q. Quit\n";
     std::cout << "======================\n";
@@ -64,7 +70,7 @@ int main(int argc, char* argv[]) {
     }
 
     while (true) {
-        std::cout << "\nSelect exercise (0-12, q to quit): ";
+        std::cout << "\nSelect exercise (0-14, q to quit): ";
         std::string input;
         std::getline(std::cin, input);
 
