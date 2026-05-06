@@ -27,3 +27,4 @@ MyBoostApp
 
 # macOS
 .DS_Store
+.cache
