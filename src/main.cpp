@@ -11,6 +11,9 @@
 #include "exercises/07_boost_memory.h"
 #include "exercises/08_boost_graph.h"
 #include "exercises/09_boost_container.h"
+#include "exercises/10_pointers_references.h"
+#include "exercises/11_matrix_formatting.h"
+#include "exercises/12_systems_hardware.h"
 
 int main(int argc, char* argv[]) {
     std::unordered_map<std::string, std::function<void()>> exercises = {
@@ -23,6 +26,9 @@ int main(int argc, char* argv[]) {
         {"7", []() { exercise_boost_memory(); }},
         {"8", []() { exercise_boost_graph(); }},
         {"9", []() { exercise_boost_container(); }},
+        {"10", []() { exercise_pointers_references(); }},
+        {"11", []() { exercise_matrix_formatting(); }},
+        {"12", []() { exercise_systems_hardware(); }},
     };
 
     std::cout << "C++ Training Exercises\n";
@@ -36,6 +42,9 @@ int main(int argc, char* argv[]) {
     std::cout << "7. Boost Memory (pool, object_pool, singleton_pool)\n";
     std::cout << "8. Boost Graph (BFS, DFS, Dijkstra, topological sort)\n";
     std::cout << "9. Boost Container (flat_map, stable_vector, static_vector)\n";
+    std::cout << "10. Pointers and References (raw pointers, references, move semantics)\n";
+    std::cout << "11. Matrix Operations and Terminal Formatting (matrix math, ANSI colors)\n";
+    std::cout << "12. Signals, IRQ, and DMA (POSIX signals, interrupts, DMA)\n";
     std::cout << "0. Run all exercises\n";
     std::cout << "q. Quit\n";
     std::cout << "======================\n";
@@ -55,7 +64,7 @@ int main(int argc, char* argv[]) {
     }
 
     while (true) {
-        std::cout << "\nSelect exercise (0-9, q to quit): ";
+        std::cout << "\nSelect exercise (0-12, q to quit): ";
         std::string input;
         std::getline(std::cin, input);
 
