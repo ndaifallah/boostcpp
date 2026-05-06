@@ -16,6 +16,7 @@
 #include "exercises/12_systems_hardware.h"
 #include "exercises/13_type_casting.h"
 #include "exercises/14_ecs_stl.h"
+#include "exercises/15_lambda_functions.h"
 
 int main(int argc, char* argv[]) {
     std::unordered_map<std::string, std::function<void()>> exercises = {
@@ -33,6 +34,7 @@ int main(int argc, char* argv[]) {
         {"12", []() { exercise_systems_hardware(); }},
         {"13", []() { exercise_type_casting(); }},
         {"14", []() { exercise_ecs_stl(); }},
+        {"15", []() { exercise_lambda_functions(); }},
     };
 
     std::cout << "C++ Training Exercises\n";
@@ -51,6 +53,7 @@ int main(int argc, char* argv[]) {
     std::cout << "12. Signals, IRQ, and DMA (POSIX signals, interrupts, DMA)\n";
     std::cout << "13. Static and Dynamic Type Casting (static_cast, dynamic_cast, reinterpret_cast, const_cast)\n";
     std::cout << "14. ECS with STL (Entity Component System using unordered_map, vector)\n";
+    std::cout << "15. Lambda Functions (capture, mutable, generic, higher-order)\n";
     std::cout << "0. Run all exercises\n";
     std::cout << "q. Quit\n";
     std::cout << "======================\n";
@@ -70,7 +73,7 @@ int main(int argc, char* argv[]) {
     }
 
     while (true) {
-        std::cout << "\nSelect exercise (0-14, q to quit): ";
+        std::cout << "\nSelect exercise (0-15, q to quit): ";
         std::string input;
         std::getline(std::cin, input);
 
