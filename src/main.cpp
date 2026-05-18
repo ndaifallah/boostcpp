@@ -51,6 +51,21 @@
 #include "exercises/47_state_machines.h"
 #include "exercises/48_physics_basics.h"
 #include "exercises/49_mini_game.h"
+#include "exercises/50_entt_basics.h"
+#include "exercises/51_entt_components.h"
+#include "exercises/52_entt_views_groups.h"
+#include "exercises/53_entt_events.h"
+#include "exercises/54_entt_raylib.h"
+#include "exercises/55_2d_animations.h"
+#include "exercises/56_multi_window.h"
+#include "exercises/57_3d_terrain.h"
+#include "exercises/58_split_screen.h"
+#include "exercises/59_gesture_detection.h"
+#include "exercises/60_dropdown_combobox.h"
+#include "exercises/61_scene_graph.h"
+#include "exercises/62_save_load.h"
+#include "exercises/63_multithreaded_loading.h"
+#include "exercises/64_final_project.h"
 
 int main(int argc, char* argv[]) {
     std::unordered_map<std::string, std::function<void()>> exercises = {
@@ -103,6 +118,21 @@ int main(int argc, char* argv[]) {
         {"47", []() { exercise_state_machines(); }},
         {"48", []() { exercise_physics_basics(); }},
         {"49", []() { exercise_mini_game(); }},
+        {"50", []() { exercise_entt_basics(); }},
+        {"51", []() { exercise_entt_components(); }},
+        {"52", []() { exercise_entt_views_groups(); }},
+        {"53", []() { exercise_entt_events(); }},
+        {"54", []() { exercise_entt_raylib(); }},
+        {"55", []() { exercise_2d_animations(); }},
+        {"56", []() { exercise_multi_window(); }},
+        {"57", []() { exercise_3d_terrain(); }},
+        {"58", []() { exercise_split_screen(); }},
+        {"59", []() { exercise_gesture_detection(); }},
+        {"60", []() { exercise_dropdown_combobox(); }},
+        {"61", []() { exercise_scene_graph(); }},
+        {"62", []() { exercise_save_load(); }},
+        {"63", []() { exercise_multithreaded_loading(); }},
+        {"64", []() { exercise_final_project(); }},
     };
 
     std::cout << "C++ Training Exercises\n";
@@ -157,6 +187,23 @@ int main(int argc, char* argv[]) {
     std::cout << "47. State Machines (MENU, PLAYING, PAUSED, GAMEOVER)\n";
     std::cout << "48. Physics Basics (gravity, bounce, projectile)\n";
     std::cout << "49. Mini Game (complete space shooter)\n";
+    std::cout << "--- EnTT Exercises ---\n";
+    std::cout << "50. EnTT Entities (create, destroy, valid)\n";
+    std::cout << "51. EnTT Components (assign, get, remove, patch)\n";
+    std::cout << "52. EnTT Views & Groups (iteration, filters, sort)\n";
+    std::cout << "53. EnTT Events & Dispatchers (sink, trigger, enqueue)\n";
+    std::cout << "54. EnTT + raylib Integration (ECS Space Shooter)\n";
+    std::cout << "--- raylib Advanced ---\n";
+    std::cout << "55. 2D Animations & Tweening (easing, lerp, bounce)\n";
+    std::cout << "56. Multi-Window & Monitor Handling (flags, fullscreen)\n";
+    std::cout << "57. 3D Terrain (heightmap, noise, procedural generation)\n";
+    std::cout << "58. Split-Screen & Multi-Viewport Rendering\n";
+    std::cout << "59. Gesture Detection (touch, swipe, pinch, drag)\n";
+    std::cout << "60. Dropdown & Combo Box UI (custom widgets)\n";
+    std::cout << "61. Scene Graph / Node Hierarchy (robot arm)\n";
+    std::cout << "62. Save & Load System (serialization, file I/O)\n";
+    std::cout << "63. Multi-Threaded Loading (async, progress bar)\n";
+    std::cout << "64. Final Project — ECS Tower Defense\n";
     std::cout << "0. Run all exercises\n";
     std::cout << "q. Quit\n";
     std::cout << "======================\n";
@@ -176,7 +223,7 @@ int main(int argc, char* argv[]) {
     }
 
     while (true) {
-        std::cout << "\nSelect exercise (0-49, q to quit): ";
+        std::cout << "\nSelect exercise (0-64, q to quit): ";
         std::string input;
         std::getline(std::cin, input);
 

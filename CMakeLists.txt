@@ -12,8 +12,11 @@ find_package(Boost REQUIRED)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(RAYLIB REQUIRED raylib)
 
+# Find EnTT
+find_package(EnTT CONFIG REQUIRED)
+
 file(GLOB EXERCISE_SOURCES src/exercises/*.cpp)
 add_executable(${PROJECT_NAME} src/main.cpp ${EXERCISE_SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR}/src ${RAYLIB_INCLUDE_DIRS})
 target_link_directories(${PROJECT_NAME} PRIVATE ${RAYLIB_LIBRARY_DIRS})
-target_link_libraries(${PROJECT_NAME} PRIVATE ${RAYLIB_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${RAYLIB_LIBRARIES} EnTT::EnTT)
